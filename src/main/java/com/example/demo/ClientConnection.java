@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.model.Match;
+import com.example.demo.model.Reject;
 import com.example.demo.model.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -24,7 +25,9 @@ public class ClientConnection implements CommandLineRunner {
         feignRestClient.getMatch((long)33, "MALE");
         //id is 21
 
-        feignRestClient.rejectMatch((long)21, (long)33, "Not my type");
+        Reject reject =new Reject((long)33, "Not my type");
+        feignRestClient.createStudent(student);
+        feignRestClient.rejectMatch((long)33, "Not my type");
 //        Match match = new Match("MALE", (long)33);
 //        feignRestClient.getMatch(match);
 
