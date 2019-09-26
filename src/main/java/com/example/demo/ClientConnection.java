@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.model.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,12 @@ public class ClientConnection implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        Student student =new Student((long)95885,"Ruth");
+        feignRestClient.createStudent(student);
+        // id is 33
+
+        
 
 //        Student student = feignRestClient.createStudent(new Student("95885", "Ruth"));
 ////        System.out.println("Student added: "+ student);

@@ -3,30 +3,21 @@ package com.example.demo.model;
 public class Student {
 
     private Long id;
-    private String studentNumber;
+    private Long studentNumber;
     private String firstName;
-    private String score;
 
     private Student(){}
 
-    public Student(String studentNumber, String firstName) {
+    public Student(Long studentNumber, String firstName) {
         this.studentNumber = studentNumber;
         this.firstName = firstName;
     }
 
-    public Long getid() {
-        return id;
-    }
-
-    public void setid(Long id) {
-        this.id = id;
-    }
-
-    public String getStudentNumber() {
+    public Long getStudentNumber() {
         return studentNumber;
     }
 
-    public void setStudentNumber(String studentNumber) {
+    public void setStudentNumber(Long studentNumber) {
         this.studentNumber = studentNumber;
     }
 
@@ -38,21 +29,11 @@ public class Student {
         this.firstName = firstName;
     }
 
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    }
-
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", studentNumber='" + studentNumber + '\'' +
+        return "Cat1Student{" +
+                "studentNumber=" + studentNumber +
                 ", firstName='" + firstName + '\'' +
-                ", score='" + score + '\'' +
                 '}';
     }
 }
