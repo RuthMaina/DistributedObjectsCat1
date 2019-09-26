@@ -31,7 +31,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Cat1Student{" +
+        return "Student{" +
                 "studentNumber=" + studentNumber +
                 ", firstName='" + firstName + '\'' +
                 '}';

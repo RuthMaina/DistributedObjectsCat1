@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.model.Match;
 import com.example.demo.model.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -20,7 +21,12 @@ public class ClientConnection implements CommandLineRunner {
         feignRestClient.createStudent(student);
         // id is 33
 
-        
+        feignRestClient.getMatch((long)33, "MALE");
+        //id is 21
+
+        feignRestClient.rejectMatch((long)21, (long)33, "Not my type");
+//        Match match = new Match("MALE", (long)33);
+//        feignRestClient.getMatch(match);
 
 //        Student student = feignRestClient.createStudent(new Student("95885", "Ruth"));
 ////        System.out.println("Student added: "+ student);
