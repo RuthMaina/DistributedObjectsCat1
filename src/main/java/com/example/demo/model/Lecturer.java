@@ -1,11 +1,11 @@
 package com.example.demo.model;
 
-public class MockLecturer {
+public class Lecturer {
 
     private Long id;
     private String name;
 
-    public MockLecturer (){}
+    public Lecturer(){}
 
     public Long getId() {
         return id;
@@ -25,7 +25,7 @@ public class MockLecturer {
 
     @Override
     public String toString() {
-        return "MockLecturer{" +
+        return "Lecturer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

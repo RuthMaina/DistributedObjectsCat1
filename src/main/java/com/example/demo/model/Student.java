@@ -1,15 +1,15 @@
 package com.example.demo.model;
 
-public class MockStudent {
+public class Student {
 
     private Long id;
     private String studentNumber;
     private String firstName;
     private String score;
 
-    private MockStudent(){}
+    private Student(){}
 
-    public MockStudent(String studentNumber, String firstName) {
+    public Student(String studentNumber, String firstName) {
         this.studentNumber = studentNumber;
         this.firstName = firstName;
     }
@@ -48,7 +48,7 @@ public class MockStudent {
 
     @Override
     public String toString() {
-        return "MockStudent{" +
+        return "Student{" +
                 "id=" + id +
                 ", studentNumber='" + studentNumber + '\'' +
                 ", firstName='" + firstName + '\'' +

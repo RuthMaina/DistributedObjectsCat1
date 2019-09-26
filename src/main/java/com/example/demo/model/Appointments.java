@@ -1,16 +1,16 @@
 package com.example.demo.model;
 
-public class MockAppointments {
+public class Appointments {
     private Long id;
     private Long studentId;
     private Long teacherId;
     private boolean confirmed;
 
-    public MockAppointments() {
+    public Appointments() {
 
     }
 
-    public MockAppointments(Long studentId, Long teacherId) {
+    public Appointments(Long studentId, Long teacherId) {
         this.studentId = studentId;
         this.teacherId = teacherId;
     }
@@ -49,7 +49,7 @@ public class MockAppointments {
 
     @Override
     public String toString() {
-        return "MockAppointments{" +
+        return "Appointments{" +
                 "id=" + id +
                 ", studentId=" + studentId +
                 ", teacherId=" + teacherId +

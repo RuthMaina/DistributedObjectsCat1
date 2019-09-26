@@ -1,8 +1,8 @@
 package com.example.demo;
 
-import com.example.demo.model.MockAppointments;
-import com.example.demo.model.MockLecturer;
-import com.example.demo.model.MockStudent;
+import com.example.demo.model.Appointments;
+import com.example.demo.model.Lecturer;
+import com.example.demo.model.Student;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,19 +12,19 @@ import java.util.List;
 public interface FeignRestClient {
 
     @RequestMapping(method= RequestMethod.POST, value="students")
-    MockStudent createStudent(@RequestBody MockStudent mockStudent);
+    Student createStudent(@RequestBody Student student);
 
     @RequestMapping(method = RequestMethod.GET, value = "students")
-    MockStudent getById(@RequestParam(name = "studentNumber") String studentNumber);
+    Student getById(@RequestParam(name = "studentNumber") String studentNumber);
 
     @RequestMapping(method = RequestMethod.GET, value = "lecturers")
-    List<MockLecturer> getAllLecturers();
+    List<Lecturer> getAllLecturers();
 
     @RequestMapping(method = RequestMethod.POST, value="appointments")
-    MockAppointments createAppointment(@RequestBody MockAppointments mockAppointments);
+    Appointments createAppointment(@RequestBody Appointments appointments);
 
     @RequestMapping(method=RequestMethod.PATCH, value="appointments/{id}")
-    MockAppointments confirmAppointment(@RequestParam("studentId") Long studentId, @PathVariable(name = "id") Long appointmentId);
+    Appointments confirmAppointment(@RequestParam("studentId") Long studentId, @PathVariable(name = "id") Long appointmentId);
 
 
 
