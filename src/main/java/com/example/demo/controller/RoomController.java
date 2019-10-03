@@ -3,13 +3,16 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Room;
 import com.example.demo.service.RoomService;
+import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "rooms")
+@RequestMapping(value = "rooms",
+        produces = {MediaType.APPLICATION_XML_VALUE,
+                MediaType.APPLICATION_JSON_VALUE})
 public class RoomController {
     private final RoomService roomService;
 
