@@ -18,16 +18,16 @@ public class ClientConnection implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Student student =new Student((long)95885,"Ruth");
-        feignRestClient.createStudent(student);
-        // id is 33
-
-        feignRestClient.getMatch((long)33, "MALE");
-        //id is 21
-
-        Reject reject =new Reject((long)33, "Not my type");
-        feignRestClient.createStudent(student);
-        feignRestClient.rejectMatch((long)33, "Not my type");
+//        Student student =new Student((long)95885,"Ruth");
+//        feignRestClient.createStudent(student);
+//        // id is 33
+//
+//        feignRestClient.getMatch((long)33, "MALE");
+//        //id is 21
+//
+//        Reject reject =new Reject((long)33, "Not my type");
+//        feignRestClient.createStudent(student);
+//        feignRestClient.rejectMatch((long)33, "Not my type");
 //        Match match = new Match("MALE", (long)33);
 //        feignRestClient.getMatch(match);
 

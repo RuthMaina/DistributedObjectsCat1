@@ -8,17 +8,17 @@ import javax.websocket.server.PathParam;
 import java.awt.desktop.UserSessionEvent;
 import java.util.List;
 
-@FeignClient(name="mockclient", url="http://10.51.10.111:2200", configuration = FeignConfig.class)
+@FeignClient(name="mockclient", url="http://10.51.28.183", configuration = FeignConfig.class)
 public interface FeignRestClient {
 
-    @RequestMapping(method= RequestMethod.POST, value="students")
-    Student createStudent(@RequestBody Student student);
-
-    @RequestMapping(method = RequestMethod.POST, value = "matches")
-    String getMatch(@RequestParam("studentId") Long studentId, @RequestParam(name = "gender") String gender);
-
-    @RequestMapping(method = RequestMethod.PATCH, value = "matches")
-    Reject rejectMatch(@PathVariable("blindDateId") Long id, @RequestBody String reject);
+//    @RequestMapping(method= RequestMethod.POST, value="students")
+//    Student createStudent(@RequestBody Student student);
+//
+//    @RequestMapping(method = RequestMethod.POST, value = "matches")
+//    String getMatch(@RequestParam("studentId") Long studentId, @RequestParam(name = "gender") String gender);
+//
+//    @RequestMapping(method = RequestMethod.PATCH, value = "matches")
+//    Reject rejectMatch(@PathVariable("blindDateId") Long id, @RequestBody String reject);
 
 //    @RequestMapping(method = RequestMethod.POST, value="matches")
 //    Match getMatch(@RequestBody Match match);
